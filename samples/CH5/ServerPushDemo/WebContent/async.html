@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <head>
+    <title>即時資料</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script type="text/javascript">
+        function asyncUpdate() {
+            var xhr;
+            if(window.XMLHttpRequest) {
+                xhr = new XMLHttpRequest();
+            }
+            else if(window.ActiveXObject) {
+                xhr = new ActiveXObject('Microsoft.XMLHTTP');
+            }
+            
+            xhr.onreadystatechange = function() {
+                if(xhr.readyState === 4) {
+                    if(xhr.status === 200) {
+                        document.getElementById('data')
+                                      .innerHTML = xhr.responseText;
+                        asyncUpdate();
+                    }
+                }
+            };
+            xhr.open('GET', 'asyncNum.do?timestamp=' + new Date().getTime());
+            xhr.send(null);
+        }
+        
+        window.onload = asyncUpdate;
+    </script>
+  </head>
+  <body>
+      即時資料: <span id="data">0</span>
+  </body>
+</html>  
