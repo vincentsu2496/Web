@@ -1,0 +1,16 @@
+以下為參考,範例,來源,網址等資訊
+-------
+sample為範例程式碼
+出自
+http://books.gotop.com.tw/bookdetails.aspx?bn=AEL008800
+好書推薦
+
+作者為
+林信良（良葛格）
+可以關鍵字搜尋
+
+作者教學網址
+https://openhome.cc/Gossip/ServletJSP/
+不僅限於jsp
+其他也可以一併服用
+https://openhome.cc/Gossip/
